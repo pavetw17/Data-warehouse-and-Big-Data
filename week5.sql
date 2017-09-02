@@ -49,7 +49,7 @@ WHERE lower(table_name) = 'course';
 
 
 --3. Note that "grade" table contain a composite primary key of (student_no, course_no). However, each
---of these attributes ìindividuallyî is a foreign key
+--of these attributes ‚Äúindividually‚Äù is a foreign key
 CREATE TABLE grade
   (
     student_no NUMBER(4),
