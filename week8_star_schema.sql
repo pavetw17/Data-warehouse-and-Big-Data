@@ -217,4 +217,10 @@ BEGIN
  
 END;
 
+--3. The transaction tuple with new attributes is to be loaded into DW. Before loading the tuple
+--into DW you will check whether the dimension tables already contain this information. If
+--yes, then only update the fact table otherwise update the required dimension tables and
+--the fact table
+
+
 
