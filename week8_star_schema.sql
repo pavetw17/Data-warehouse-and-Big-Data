@@ -1,6 +1,6 @@
 --Creat a star-schema.
 --Firstly, create dimension tables
-DROP TABLE Fact_Sales;
+DROP TABLE Fact_Sales; -- Drop table Fact_Sales first 
 DROP TABLE Dimension_Product;
 DROP TABLE Dimension_Store;
 DROP TABLE Dimension_Customer;
