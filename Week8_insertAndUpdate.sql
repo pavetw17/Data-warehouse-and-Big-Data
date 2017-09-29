@@ -100,8 +100,9 @@ BEGIN
         --rownum =1  -- Stop counting if 1 found
 			--	DBMS_OUTPUT.PUT_LINE('++++++ select count(*) from ' ||  v_dimensionTableArray(i) || ' where ' || v_columnTableArray(i) || ' = ''' ||  v_valueTransactionArrayID(i) ||'''' ) ;
 			--	DBMS_OUTPUT.PUT_LINE('------ v_checkExists: ' || v_checkExists );
-			DBMS_OUTPUT.PUT_LINE(' ------------ TABLE: ' ||v_dimensionTableArray(i));
-			if v_checkExists = 1 then  
+				COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+			if v_checkExists = 1 then 
+				DBMS_OUTPUT.PUT_LINE('------ Table exists: ' || v_dimensionTableArray(i) );
 				update Fact_Sales 	set TOTAL_SALE = VAR_TOTAL_SALE, 
 										T_DATE = ROWS_TRANSACTION.T_DATE, 
 										PRICE = ROWS_MASTERDATA.PRICE
@@ -115,6 +116,7 @@ BEGIN
 --										where  CUSTOMER_ID =' || ROWS_TRANSACTION.CUSTOMER_ID || ' AND STORE_ID  = '  || ROWS_TRANSACTION.STORE_ID 	|| ' AND
 --										SUPPLIER_ID =' || ROWS_MASTERDATA.SUPPLIER_ID 	|| ' AND PRODUCT_ID ='  || ROWS_TRANSACTION.PRODUCT_ID  );						
 			else
+				DBMS_OUTPUT.PUT_LINE(' ------------ TABLE NOT EXISTS: ' ||v_dimensionTableArray(i));
 				--execute immediate 'SELECT LISTAGG (COLUMN_NAME, '', '') WITHIN GROUP (ORDER BY COLUMN_ID) into' ||  v_strColumnName || 
 				-- ' FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = ''' || v_dimensionTableArray(i) ||'''' ;
         
@@ -128,25 +130,25 @@ BEGIN
       --       DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS || '-----  DIMENSION_PRODUCT:' );
 						insert into DIMENSION_PRODUCT
 						values (ROWS_TRANSACTION.PRODUCT_ID, ROWS_MASTERDATA.PRODUCT_NAME);
-						COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+					
 			
 				ELSIF  LOWER(v_dimensionTableArray(i)) = LOWER('DIMENSION_SUPPLIER') THEN
          --   DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS || '-----  DIMENSION_SUPPLIER');
 						insert into DIMENSION_SUPPLIER 
 						values (ROWS_MASTERDATA.SUPPLIER_ID, ROWS_MASTERDATA.SUPPLIER_NAME);
-						COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+					--	COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
 				
 				ELSIF  LOWER(v_dimensionTableArray(i)) = LOWER('DIMENSION_STORE') THEN
         --    DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS || '-----  DIMENSION_STORE');
            	insert into DIMENSION_STORE 
             values (ROWS_TRANSACTION.STORE_ID, ROWS_TRANSACTION.STORE_NAME);
-			COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+			--COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
 				
         ELSE 
         --    DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS || '-----  DIMENSION_STORE');
           	insert into DIMENSION_CUSTOMER
             values (ROWS_TRANSACTION.CUSTOMER_ID, ROWS_TRANSACTION.CUSTOMER_NAME);
-			COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+			--COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
 				END IF;
         
 --        	DBMS_OUTPUT.PUT_LINE('select count(*) from FACT_SALES where PRODUCT_ID = ''' || ROWS_TRANSACTION.PRODUCT_ID || 
