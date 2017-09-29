@@ -136,19 +136,19 @@ BEGIN
          --   DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS || '-----  DIMENSION_SUPPLIER');
 						insert into DIMENSION_SUPPLIER 
 						values (ROWS_MASTERDATA.SUPPLIER_ID, ROWS_MASTERDATA.SUPPLIER_NAME);
-					--	COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+				
 				
 				ELSIF  LOWER(v_dimensionTableArray(i)) = LOWER('DIMENSION_STORE') THEN
         --    DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS || '-----  DIMENSION_STORE');
            	insert into DIMENSION_STORE 
             values (ROWS_TRANSACTION.STORE_ID, ROWS_TRANSACTION.STORE_NAME);
-			--COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+	
 				
         ELSE 
         --    DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS || '-----  DIMENSION_STORE');
           	insert into DIMENSION_CUSTOMER
             values (ROWS_TRANSACTION.CUSTOMER_ID, ROWS_TRANSACTION.CUSTOMER_NAME);
-			--COUNT_INSERTFACTTABLE := COUNT_INSERTFACTTABLE+1;
+	
 				END IF;
         
 --        	DBMS_OUTPUT.PUT_LINE('select count(*) from FACT_SALES where PRODUCT_ID = ''' || ROWS_TRANSACTION.PRODUCT_ID || 
@@ -156,7 +156,15 @@ BEGIN
 --                                                          ''' AND SUPPLIER_ID = ''' || ROWS_MASTERDATA.SUPPLIER_ID ||
 --                                                          ''' AND CUSTOMER_ID = ''' || ROWS_TRANSACTION.CUSTOMER_ID ||
 --                                                          ''' AND rownum = 1 '  ) ;
-        	DBMS_OUTPUT.PUT_LINE(' COUNT_INSERTFACTTABLE ' ||COUNT_INSERTFACTTABLE);
+        	
+        			
+				--DBMS_OUTPUT.PUT_LINE ('++++++++++' || ' 
+				--					insert into ' || v_dimensionTableArray(i)  || ' ( ' || v_strColumnName || ' ) values ( ' || v_valueTransactionArrayID(i) 
+                --  || ', ' || v_valueTransactionArrayNAME(i) || ')');		
+										
+			end if;
+			   
+       --  DBMS_OUTPUT.PUT_LINE(' COUNT_INSERTFACTTABLE ' ||COUNT_INSERTFACTTABLE);  --important comment
         execute immediate 'select count(*) from FACT_SALES where PRODUCT_ID = ''' || ROWS_TRANSACTION.PRODUCT_ID || 
                                                           ''' AND STORE_ID = '''    || ROWS_TRANSACTION.STORE_ID ||
                                                           ''' AND SUPPLIER_ID = ''' || ROWS_MASTERDATA.SUPPLIER_ID ||
@@ -165,24 +173,18 @@ BEGIN
                                                              
         --DBMS_OUTPUT.PUT_LINE(' ------------ v_checkFactTableExists: ' ||v_checkFactTableExists);
         if v_checkFactTableExists = 0 AND COUNT_INSERTFACTTABLE = 4 then 
-          DBMS_OUTPUT.PUT_LINE(' ------------ v_checkFactTableExists: ' ||v_checkFactTableExists ||
-                               ' ------------ ROWS_TRANSACTION.PRODUCT_ID: ' ||ROWS_TRANSACTION.PRODUCT_ID ||
-                               ' ------------ ROWS_TRANSACTION.CUSTOMER_ID: ' ||ROWS_TRANSACTION.CUSTOMER_ID || 
-                               '  ------------ ROWS_MASTERDATA.SUPPLIER_ID: ' ||ROWS_MASTERDATA.SUPPLIER_ID ||
-                                '  ------------ ROWS_TRANSACTION.STORE_ID: ' ||ROWS_TRANSACTION.STORE_ID );
+          DBMS_OUTPUT.PUT_LINE(' ROWS_TRANSACTION.PRODUCT_ID: ' ||ROWS_TRANSACTION.PRODUCT_ID ||
+                               '  --ROWS_TRANSACTION.CUSTOMER_ID: ' ||ROWS_TRANSACTION.CUSTOMER_ID || 
+                               ' -- ROWS_MASTERDATA.SUPPLIER_ID: ' ||ROWS_MASTERDATA.SUPPLIER_ID ||
+                                '  -- ROWS_TRANSACTION.STORE_ID: ' ||ROWS_TRANSACTION.STORE_ID );
                 
           insert into Fact_Sales (PRODUCT_ID, STORE_ID, CUSTOMER_ID, SUPPLIER_ID, TOTAL_SALE, T_DATE, PRICE)
           values ( ROWS_TRANSACTION.PRODUCT_ID, ROWS_TRANSACTION.STORE_ID, ROWS_TRANSACTION.CUSTOMER_ID, ROWS_MASTERDATA.SUPPLIER_ID,
                VAR_TOTAL_SALE, ROWS_TRANSACTION.T_DATE, ROWS_MASTERDATA.PRICE );
 			   COUNT_INSERTFACTTABLE := 0;
         END IF;
-        			
-				--DBMS_OUTPUT.PUT_LINE ('++++++++++' || ' 
-				--					insert into ' || v_dimensionTableArray(i)  || ' ( ' || v_strColumnName || ' ) values ( ' || v_valueTransactionArrayID(i) 
-                --  || ', ' || v_valueTransactionArrayNAME(i) || ')');		
-										
-			end if;
-			   
+         
+         
 			--DBMS_OUTPUT.PUT_LINE('-------- COUNT_INSERTROWS: ' || COUNT_INSERTROWS);				
 			IF COUNT_INSERTROWS = 10 THEN
 				COUNT_INSERTROWS := 0;
@@ -200,5 +202,5 @@ BEGIN
   CLOSE CUR_50TRANSACTION;
   DBMS_OUTPUT.PUT_LINE('Closing cursor...');
  
+ 
 END;
-
