@@ -1,0 +1,53 @@
+Cursor not open
+Opening cursor...
+ - Transaction ID: 1 - Product ID: P-1008 - CUSTOMER_ID: C-20 - STORE_ID: S-6 - STORE_NAME: West Auckland - T_DATE: 22-AUG-16 - QUANTITY: 4
+ - Transaction ID: 2 - Product ID: P-1029 - CUSTOMER_ID: C-4 - STORE_ID: S-8 - STORE_NAME: Westgate - T_DATE: 23-APR-16 - QUANTITY: 7
+ - Transaction ID: 3 - Product ID: P-1020 - CUSTOMER_ID: C-9 - STORE_ID: S-4 - STORE_NAME: St. james - T_DATE: 29-AUG-16 - QUANTITY: 8
+ - Transaction ID: 4 - Product ID: P-1059 - CUSTOMER_ID: C-25 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 26-APR-16 - QUANTITY: 4
+ - Transaction ID: 5 - Product ID: P-1055 - CUSTOMER_ID: C-37 - STORE_ID: S-1 - STORE_NAME: Queen St. - T_DATE: 21-DEC-16 - QUANTITY: 2
+ - Transaction ID: 6 - Product ID: P-1077 - CUSTOMER_ID: C-11 - STORE_ID: S-6 - STORE_NAME: West Auckland - T_DATE: 08-MAR-16 - QUANTITY: 7
+ - Transaction ID: 7 - Product ID: P-1007 - CUSTOMER_ID: C-32 - STORE_ID: S-4 - STORE_NAME: St. james - T_DATE: 10-NOV-16 - QUANTITY: 3
+ - Transaction ID: 8 - Product ID: P-1023 - CUSTOMER_ID: C-49 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 13-DEC-16 - QUANTITY: 4
+ - Transaction ID: 9 - Product ID: P-1086 - CUSTOMER_ID: C-30 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 08-OCT-16 - QUANTITY: 7
+ - Transaction ID: 10 - Product ID: P-1004 - CUSTOMER_ID: C-41 - STORE_ID: S-8 - STORE_NAME: Westgate - T_DATE: 02-APR-16 - QUANTITY: 5
+ - Transaction ID: 11 - Product ID: P-1024 - CUSTOMER_ID: C-17 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 16-NOV-16 - QUANTITY: 4
+ - Transaction ID: 12 - Product ID: P-1067 - CUSTOMER_ID: C-24 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 31-MAY-16 - QUANTITY: 5
+ - Transaction ID: 13 - Product ID: P-1068 - CUSTOMER_ID: C-36 - STORE_ID: S-5 - STORE_NAME: Massey - T_DATE: 19-MAY-16 - QUANTITY: 6
+ - Transaction ID: 14 - Product ID: P-1046 - CUSTOMER_ID: C-22 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 23-NOV-16 - QUANTITY: 7
+ - Transaction ID: 15 - Product ID: P-1087 - CUSTOMER_ID: C-40 - STORE_ID: S-8 - STORE_NAME: Westgate - T_DATE: 11-MAR-16 - QUANTITY: 2
+ - Transaction ID: 16 - Product ID: P-1033 - CUSTOMER_ID: C-19 - STORE_ID: S-9 - STORE_NAME: Whangaparaoa - T_DATE: 06-JAN-16 - QUANTITY: 4
+ - Transaction ID: 17 - Product ID: P-1094 - CUSTOMER_ID: C-34 - STORE_ID: S-9 - STORE_NAME: Whangaparaoa - T_DATE: 06-JUN-16 - QUANTITY: 6
+ - Transaction ID: 18 - Product ID: P-1077 - CUSTOMER_ID: C-47 - STORE_ID: S-9 - STORE_NAME: Whangaparaoa - T_DATE: 16-JUL-16 - QUANTITY: 7
+ - Transaction ID: 19 - Product ID: P-1067 - CUSTOMER_ID: C-23 - STORE_ID: S-10 - STORE_NAME: Henderson - T_DATE: 19-AUG-16 - QUANTITY: 7
+ - Transaction ID: 20 - Product ID: P-1014 - CUSTOMER_ID: C-8 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 27-MAR-16 - QUANTITY: 6
+ - Transaction ID: 21 - Product ID: P-1085 - CUSTOMER_ID: C-27 - STORE_ID: S-6 - STORE_NAME: West Auckland - T_DATE: 16-FEB-16 - QUANTITY: 7
+ - Transaction ID: 22 - Product ID: P-1009 - CUSTOMER_ID: C-22 - STORE_ID: S-6 - STORE_NAME: West Auckland - T_DATE: 18-MAR-16 - QUANTITY: 4
+ - Transaction ID: 23 - Product ID: P-1060 - CUSTOMER_ID: C-40 - STORE_ID: S-4 - STORE_NAME: St. james - T_DATE: 12-MAY-16 - QUANTITY: 9
+ - Transaction ID: 24 - Product ID: P-1053 - CUSTOMER_ID: C-14 - STORE_ID: S-4 - STORE_NAME: St. james - T_DATE: 27-FEB-16 - QUANTITY: 2
+ - Transaction ID: 25 - Product ID: P-1045 - CUSTOMER_ID: C-6 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 29-JUL-16 - QUANTITY: 4
+ - Transaction ID: 26 - Product ID: P-1057 - CUSTOMER_ID: C-25 - STORE_ID: S-10 - STORE_NAME: Henderson - T_DATE: 30-APR-16 - QUANTITY: 4
+ - Transaction ID: 27 - Product ID: P-1091 - CUSTOMER_ID: C-45 - STORE_ID: S-4 - STORE_NAME: St. james - T_DATE: 16-NOV-16 - QUANTITY: 5
+ - Transaction ID: 28 - Product ID: P-1048 - CUSTOMER_ID: C-17 - STORE_ID: S-4 - STORE_NAME: St. james - T_DATE: 09-JUL-16 - QUANTITY: 8
+ - Transaction ID: 29 - Product ID: P-1015 - CUSTOMER_ID: C-13 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 23-FEB-16 - QUANTITY: 1
+ - Transaction ID: 30 - Product ID: P-1006 - CUSTOMER_ID: C-18 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 02-MAR-16 - QUANTITY: 9
+ - Transaction ID: 31 - Product ID: P-1084 - CUSTOMER_ID: C-12 - STORE_ID: S-8 - STORE_NAME: Westgate - T_DATE: 08-SEP-16 - QUANTITY: 2
+ - Transaction ID: 32 - Product ID: P-1082 - CUSTOMER_ID: C-44 - STORE_ID: S-2 - STORE_NAME: Albany - T_DATE: 15-SEP-16 - QUANTITY: 10
+ - Transaction ID: 33 - Product ID: P-1046 - CUSTOMER_ID: C-38 - STORE_ID: S-5 - STORE_NAME: Massey - T_DATE: 15-FEB-16 - QUANTITY: 3
+ - Transaction ID: 34 - Product ID: P-1095 - CUSTOMER_ID: C-13 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 06-NOV-16 - QUANTITY: 5
+ - Transaction ID: 35 - Product ID: P-1018 - CUSTOMER_ID: C-1 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 25-APR-16 - QUANTITY: 3
+ - Transaction ID: 36 - Product ID: P-1069 - CUSTOMER_ID: C-8 - STORE_ID: S-1 - STORE_NAME: Queen St. - T_DATE: 19-AUG-16 - QUANTITY: 6
+ - Transaction ID: 37 - Product ID: P-1039 - CUSTOMER_ID: C-18 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 06-MAR-16 - QUANTITY: 1
+ - Transaction ID: 38 - Product ID: P-1099 - CUSTOMER_ID: C-1 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 15-SEP-16 - QUANTITY: 2
+ - Transaction ID: 39 - Product ID: P-1092 - CUSTOMER_ID: C-16 - STORE_ID: S-2 - STORE_NAME: Albany - T_DATE: 26-DEC-16 - QUANTITY: 9
+ - Transaction ID: 40 - Product ID: P-1085 - CUSTOMER_ID: C-23 - STORE_ID: S-9 - STORE_NAME: Whangaparaoa - T_DATE: 09-FEB-16 - QUANTITY: 9
+ - Transaction ID: 41 - Product ID: P-1068 - CUSTOMER_ID: C-38 - STORE_ID: S-3 - STORE_NAME: Manukau - T_DATE: 06-MAY-16 - QUANTITY: 3
+ - Transaction ID: 42 - Product ID: P-1089 - CUSTOMER_ID: C-24 - STORE_ID: S-10 - STORE_NAME: Henderson - T_DATE: 19-MAY-16 - QUANTITY: 8
+ - Transaction ID: 43 - Product ID: P-1003 - CUSTOMER_ID: C-21 - STORE_ID: S-5 - STORE_NAME: Massey - T_DATE: 05-FEB-16 - QUANTITY: 2
+ - Transaction ID: 44 - Product ID: P-1072 - CUSTOMER_ID: C-39 - STORE_ID: S-5 - STORE_NAME: Massey - T_DATE: 13-FEB-16 - QUANTITY: 9
+ - Transaction ID: 45 - Product ID: P-1007 - CUSTOMER_ID: C-21 - STORE_ID: S-1 - STORE_NAME: Queen St. - T_DATE: 12-OCT-16 - QUANTITY: 5
+ - Transaction ID: 46 - Product ID: P-1006 - CUSTOMER_ID: C-44 - STORE_ID: S-2 - STORE_NAME: Albany - T_DATE: 03-MAR-16 - QUANTITY: 4
+ - Transaction ID: 47 - Product ID: P-1093 - CUSTOMER_ID: C-3 - STORE_ID: S-8 - STORE_NAME: Westgate - T_DATE: 27-APR-16 - QUANTITY: 9
+ - Transaction ID: 48 - Product ID: P-1035 - CUSTOMER_ID: C-26 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 30-JAN-16 - QUANTITY: 5
+ - Transaction ID: 49 - Product ID: P-1042 - CUSTOMER_ID: C-37 - STORE_ID: S-7 - STORE_NAME: East Auckland - T_DATE: 26-SEP-16 - QUANTITY: 3
+ - Transaction ID: 50 - Product ID: P-1037 - CUSTOMER_ID: C-24 - STORE_ID: S-9 - STORE_NAME: Whangaparaoa - T_DATE: 18-SEP-16 - QUANTITY: 10
+Closing cursor...
