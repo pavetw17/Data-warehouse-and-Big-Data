@@ -200,5 +200,5 @@ BEGIN
   CLOSE CUR_50TRANSACTION;
   DBMS_OUTPUT.PUT_LINE('Closing cursor...');
  
- 
 END;
+
